@@ -1,0 +1,28 @@
+{
+    "name": "aoeng/ethereum-api",
+    "description": "ethereum apis for laravel",
+    "authors": [
+        {
+            "name": "Dang",
+            "email": "859726077@qq.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Aoeng\\EthereumApi\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Aoeng\\EthereumApi\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aoeng\\EthereumApi\\Providers\\EthereumApiServiceProvider"
+            ]
+        }
+    }
+}
