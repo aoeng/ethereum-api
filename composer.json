@@ -1,6 +1,7 @@
 {
     "name": "aoeng/ethereum-api",
     "description": "ethereum apis for laravel",
+    "license": "MIT",
     "authors": [
         {
             "name": "Dang",
