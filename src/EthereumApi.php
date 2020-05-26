@@ -75,12 +75,17 @@ class EthereumApi
 
     /**
      * 获取“ ERC20-令牌转移事件”的列表获取交易列表
-     * @param $address
+     * @param $param
      * @return bool|mixed
      */
-    public function accountTokenTx($address)
+    public function accountTokenTx($param)
     {
-        $this->url = "{$this->host}?module=account&action=tokentx&apikey={$this->key}&address={$address}&startblock=0&endblock=99999999&page=1&offset=10&sort=asc";
+        $param['sort'] = $param['sort'] ?? 'asc';
+        $param['page'] = $param['page'] ?? 1;
+        $param['offset'] = $param['offset'] ?? 100;
+
+
+        $this->url = "{$this->host}?module=account&action=tokentx&apikey={$this->key}&" . http_build_query($param);
         return $this->request();
     }
 
